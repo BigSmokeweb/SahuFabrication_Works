@@ -1,0 +1,57 @@
+# Sahu Fabrication Works
+
+Responsive Next.js website for a fabrication business in Thane West. Based on the layout, gradient header, image slider, introduction, service presentation and enquiry/footer progression of the supplied House of Fabrication reference. Original branding, copy and illustrations are used; no reference-site photographs or claims were reused.
+
+## Development
+
+Use Node.js 24 LTS and npm. This workspace was also tested with Node.js 26.13.0.
+
+```sh
+npm ci
+npm run dev
+```
+
+Open http://localhost:3000. For a production preview:
+
+```sh
+npm run build
+npm run start
+```
+
+## Pages and features
+
+- Home with an accessible manual slider, company introduction, service categories and enquiry CTAs.
+- About, products/services, 27 distinct category/product detail URLs, gallery with filters and keyboard-accessible image dialog, contact, privacy and 404.
+- Responsive navigation, skip link, focus indicators, reduced-motion support and original product visuals.
+- React Hook Form and Zod enquiry validation; matching server validation, request-size limits, same-origin checks, honeypot, shared Upstash rate limits, Resend plain-text email and idempotency keys.
+- Copy-enquiry fallback; no draft or customer data stored in browser storage.
+- Nonce-based script CSP, security headers, preview noindex, sitemap and robots routes.
+
+## Technology
+
+Next.js 16.4.6, React 19.3.1, strict TypeScript, Tailwind CSS, Lucide, React Hook Form, Zod, Resend and Upstash. CSS handles transitions and reduced motion; an additional animation runtime was omitted to reduce client weight. Content pages use server rendering so each response can have a fresh CSP nonce. No database, accounts, analytics, uploads or admin system.
+
+## Business configuration
+
+Edit `src/lib/business.ts`. Phone numbers, full address and 1970 establishment date remain **unverified**. They are excluded from rendered pages and structured data. Call, WhatsApp and precise map links activate only when the corresponding verified configuration is supplied. The owner asked to complete these steps later.
+
+All 22 supplied services are represented across six categories. Stainless steel grades, certifications, statistics, reviews and guarantees are intentionally absent until verified.
+
+## Checks
+
+```sh
+npm run lint
+npm run typecheck
+npm test
+npm run build
+npx playwright install chromium firefox webkit
+npm run test:e2e
+npm audit
+npm audit --omit=dev
+```
+
+See [TESTING.md](TESTING.md), [SECURITY.md](SECURITY.md), [DEPLOYMENT.md](DEPLOYMENT.md) and [RELEASE-REPORT.md](RELEASE-REPORT.md). `ASSETS.md` documents image provenance.
+
+## Repository and release
+
+The existing repository is https://github.com/BigSmokeweb/SahuFabrication_Works. It was empty when cloned. At the owner's request, the full implementation is published as one fresh initial commit under Milind Sahu, with `main` and `feature/sahu-website` pointing to that initial source state. No production promotion is implied by publishing source or by a successful local build. Owner-approved contact data, delivery configuration, controlled real-email testing, and deployment verification remain release gates.
