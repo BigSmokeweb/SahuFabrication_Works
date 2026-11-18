@@ -63,7 +63,7 @@ Repository: https://github.com/BigSmokeweb/SahuFabrication_Works
 
 The exact existing repository was cloned and confirmed empty; its remote points to the supplied URL. Local work is on `feature/sahu-website`. No existing source or history was overwritten.
 
-- Source publication and a fresh single-commit history under Milind Sahu were requested by the owner on 19 November 2026. The complete implementation is published to `main` and `feature/sahu-website` as the same initial commit.
+- Source publication and a fresh initial commit under Milind Sahu were requested by the owner on 19 November 2026. Subsequent repository cleanup retains only `main` and pauses scheduled Dependabot version-update PRs.
 - Final commit SHA: see the repository branch head and publication confirmation in the chat. The previous draft PR is superseded by the requested fresh publication.
 - CI status at local validation: no remote run yet; CI, CodeQL and Dependabot files are prepared. Consult the checks on the published commit for current results.
 - Branch protections/security settings: not changed.

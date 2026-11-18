@@ -54,4 +54,4 @@ See [TESTING.md](TESTING.md), [SECURITY.md](SECURITY.md), [DEPLOYMENT.md](DEPLOY
 
 ## Repository and release
 
-The existing repository is https://github.com/BigSmokeweb/SahuFabrication_Works. It was empty when cloned. At the owner's request, the full implementation is published as one fresh initial commit under Milind Sahu, with `main` and `feature/sahu-website` pointing to that initial source state. No production promotion is implied by publishing source or by a successful local build. Owner-approved contact data, delivery configuration, controlled real-email testing, and deployment verification remain release gates.
+The existing repository is https://github.com/BigSmokeweb/SahuFabrication_Works. It was empty when cloned. At the owner's request, the implementation history starts with a fresh initial commit under Milind Sahu, and only `main` is retained. Scheduled Dependabot version-update PRs are paused with an open-PR limit of zero. No production promotion is implied by publishing source or by a successful local build. Owner-approved contact data, delivery configuration, controlled real-email testing, and deployment verification remain release gates.
