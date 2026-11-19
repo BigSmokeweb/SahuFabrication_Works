@@ -216,7 +216,7 @@ export function Hero() {
           <h1>{s.title}</h1>
           <p className="hero-text">{s.text}</p>
           <div className="hero-actions">
-            <Link className="button red" href={s.link}>
+            <Link className="button primary" href={s.link}>
               Explore Our Services
             </Link>
             <Link className="button outline" href="/contact">

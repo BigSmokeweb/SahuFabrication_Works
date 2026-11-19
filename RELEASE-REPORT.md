@@ -2,6 +2,8 @@
 
 For the subsequent UI polish and enquiry-security fixes, see [UI-FIX-REPORT.md](UI-FIX-REPORT.md). The results below describe the initial implementation; the follow-up report records the later revision's checks.
 
+The current visual theme and its verification are documented in [PALETTE.md](PALETTE.md), following the owner's grayscale palette update.
+
 **Assessment: NOT READY for public production.** The website implementation is ready for local review. Business verification, delivery setup, staging verification and publication remain incomplete. The owner deferred business-contact confirmation.
 
 ## Completed implementation

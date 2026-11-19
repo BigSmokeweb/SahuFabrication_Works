@@ -90,7 +90,7 @@ export default async function Service({
             before confirming the scope and quotation.
           </p>
           <Link
-            className="button red"
+            className="button primary"
             href={"/contact?service=" + encodeURIComponent(title) + "#enquiry"}
           >
             Enquire About {title}

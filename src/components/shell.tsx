@@ -74,7 +74,7 @@ export function Header() {
               </Link>
             ))}
             <Link
-              className="button red nav-cta"
+              className="button primary nav-cta"
               href="/contact#enquiry"
               onClick={() => setOpen(false)}
             >
@@ -124,7 +124,7 @@ export function Footer() {
             <br />
             Tell us about your space.
           </p>
-          <Link className="button red" href="/contact">
+          <Link className="button primary" href="/contact">
             Make an Enquiry
           </Link>
           {business.verifiedPhone && (

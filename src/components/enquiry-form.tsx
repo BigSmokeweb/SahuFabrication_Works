@@ -190,7 +190,11 @@ export function EnquiryForm({
           </p>
         )}
         <div className="form-actions">
-          <button className="button red" disabled={isSubmitting} type="submit">
+          <button
+            className="button primary"
+            disabled={isSubmitting}
+            type="submit"
+          >
             {isSubmitting ? "Sending Enquiry…" : "Send Enquiry"}
           </button>
           <button className="button dark" onClick={copyEnquiry} type="button">
