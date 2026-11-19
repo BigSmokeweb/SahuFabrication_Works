@@ -110,7 +110,7 @@ p {
 }
 .topbar .wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding-block: 7px;
 }
 .topbar span:last-child {
@@ -1266,9 +1266,6 @@ footer .brand small {
 @media (max-width: 700px) {
   .wrap {
     width: calc(100% - 40px);
-  }
-  .topbar .wrap > span:first-child {
-    display: none;
   }
   .topbar .wrap {
     justify-content: center;

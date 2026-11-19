@@ -36,7 +36,6 @@ export function Header() {
       </a>
       <div className="topbar">
         <div className="wrap">
-          <span>Metalwork for homes, businesses & industry</span>
           <span>
             <MapPin size={13} /> {business.locality}
           </span>
