@@ -2,7 +2,7 @@
 
 ## Supported release
 
-The initial 1.x implementation is under development. Support only the latest patched dependencies compatible with this application. Dependabot checks npm and Actions weekly; audit and test every update before merging.
+The initial 1.x implementation is under development. Support only the latest patched dependencies compatible with this application. Scheduled Dependabot version-update PRs are paused at the owner's request; audit and test every dependency update before publishing it.
 
 ## Reporting
 
@@ -11,15 +11,15 @@ Do not publish customer data, credentials or exploit details in a public issue. 
 ## Controls
 
 - Server-side Zod validation, strict field allowlist, Unicode name validation, Indian mobile format, bounded email/message and fixed service selection.
-- 12,000-byte streaming body limit, JSON-only POST endpoint, exact configured-origin comparison and no permissive CORS.
+- 12,000-byte streaming body limit, JSON-only POST endpoint, exact comparison against the normalized configured origin and no permissive CORS.
 - Distributed Upstash sliding-window limits: three submissions per hashed IP per ten minutes, plus 40 total per hour. Timeout or service failure blocks delivery. No in-memory security fallback.
 - On Vercel, use platform-overwritten `x-vercel-forwarded-for`. The handler refuses delivery on unsupported hosting until a trusted ingress adapter is implemented. Do not trust arbitrary `x-forwarded-for`.
-- Honeypot rejects populated fields, and email-provider idempotency protects a retry of the same request. Global throttling reduces quota exhaustion but can deny legitimate enquiries during abuse. Monitor and consider Turnstile if needed.
+- Honeypot rejects populated fields with a visible 400 response; it never reports a false delivery success. Hexadecimal UUID v4 keys and email-provider idempotency protect retries. Global throttling reduces quota exhaustion but can deny legitimate enquiries during abuse. Monitor and consider Turnstile if needed.
 - Resend receives plain text with a fixed subject. Validated email is only used as reply-to; messages are never interpreted as HTML. Email acceptance is distinguished from confirmed inbox arrival.
 - Secrets stay server-side. Client form receives only a delivery-enabled boolean. No PII in application error logs or browser storage. Logs contain a fixed event name only.
 - CSP uses a fresh per-response nonce and strict-dynamic for scripts. Script `unsafe-inline` is absent. `unsafe-eval` is development-only. `style-src-attr 'unsafe-inline'` is a documented compatibility exception for framework-generated Next/Image inline sizing/layout attributes; it does not permit inline scripts. Nonce-based style elements remain required.
 - Content pages are dynamically rendered because static HTML cannot reuse a fresh nonce safely. Edge/CDN caching must not reuse nonce-bearing HTML.
-- HSTS, nosniff, restrictive permissions, referrer policy and frame protection. The API is JSON-only with no-store responses and inherits the common non-CSP headers. No auth cookies or uploads exist.
+- HSTS, nosniff, restrictive permissions, referrer policy, same-origin opener isolation and frame protection. The enquiry API returns JSON with no-store and a restrictive `default-src 'none'; frame-ancestors 'none'` CSP. No auth cookies or uploads exist.
 
 ## Limits and maintenance
 

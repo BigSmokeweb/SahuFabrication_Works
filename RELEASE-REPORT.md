@@ -1,5 +1,7 @@
 # Release report — 19 November 2026
 
+For the subsequent UI polish and enquiry-security fixes, see [UI-FIX-REPORT.md](UI-FIX-REPORT.md). The results below describe the initial implementation; the follow-up report records the later revision's checks.
+
 **Assessment: NOT READY for public production.** The website implementation is ready for local review. Business verification, delivery setup, staging verification and publication remain incomplete. The owner deferred business-contact confirmation.
 
 ## Completed implementation

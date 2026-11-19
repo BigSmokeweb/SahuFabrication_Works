@@ -12,6 +12,7 @@ const response = (status: number, message: string) =>
       status,
       headers: {
         "Cache-Control": "no-store",
+        "Content-Security-Policy": "default-src 'none'; frame-ancestors 'none'",
         ...(status === 429 ? { "Retry-After": "600" } : {}),
       },
     },
@@ -57,6 +58,9 @@ export function createEnquiryHandler(deps: Dependencies) {
     } catch {
       return response(400, "Please check the enquiry and try again.");
     }
+    // A filled honeypot fails schema validation (400) rather than being
+    // silently accepted: a browser autofill must never make a real
+    // customer's enquiry disappear while telling them it was sent.
     const data = enquirySchema.safeParse(raw);
     if (!data.success)
       return response(
@@ -64,7 +68,12 @@ export function createEnquiryHandler(deps: Dependencies) {
         "Please check your name, phone, service, message and consent.",
       );
     const key = request.headers.get("idempotency-key");
-    if (!key || !/^\w{8}-\w{4}-4\w{3}-[89ab]\w{3}-\w{12}$/i.test(key))
+    if (
+      !key ||
+      !/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(
+        key,
+      )
+    )
       return response(400, "Please reload the form and try again.");
     if (!deps.configured())
       return response(

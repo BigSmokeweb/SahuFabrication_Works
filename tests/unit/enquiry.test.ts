@@ -100,6 +100,28 @@ describe("Request integrity and delivery", () => {
       ).status,
     ).toBe(400);
   });
+  it("rejects filled honeypot visibly and never emails it", async () => {
+    const { handler, deps } = setup();
+    const result = await handler(request({ ...valid, website: "http://spam" }));
+    expect(result.status).toBe(400);
+    expect(result.headers.get("Content-Security-Policy")).toBe(
+      "default-src 'none'; frame-ancestors 'none'",
+    );
+    expect(deps.send).not.toHaveBeenCalled();
+  });
+  it("rejects idempotency keys that are not hexadecimal UUID v4", async () => {
+    const { handler, deps } = setup();
+    expect(
+      (
+        await handler(
+          request(valid, {
+            "Idempotency-Key": "zzzzzzzz-zzzz-4zzz-8zzz-zzzzzzzzzzzz",
+          }),
+        )
+      ).status,
+    ).toBe(400);
+    expect(deps.send).not.toHaveBeenCalled();
+  });
   it("validates on server and never sends invalid data", async () => {
     const { handler, deps } = setup();
     expect((await handler(request({ ...valid, consent: false }))).status).toBe(

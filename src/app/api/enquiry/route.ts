@@ -13,12 +13,21 @@ const needed = [
   "RATE_LIMIT_SALT",
   "SITE_URL",
 ];
+// Compare against the normalised origin so a trailing slash or path in
+// SITE_URL cannot silently break (or loosen) the origin check.
+function siteOrigin() {
+  try {
+    return new URL(process.env.SITE_URL || "").origin;
+  } catch {
+    return null;
+  }
+}
 export const POST = createEnquiryHandler({
   configured: () =>
     needed.every((k) => !!process.env[k]) && process.env.VERCEL === "1",
   allowedOrigin: (origin) =>
     !!origin &&
-    (origin === process.env.SITE_URL ||
+    (origin === siteOrigin() ||
       origin === `https://${process.env.VERCEL_URL}` ||
       (process.env.NODE_ENV === "development" &&
         origin === "http://localhost:3000")),

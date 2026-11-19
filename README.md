@@ -29,7 +29,7 @@ npm run start
 
 ## Technology
 
-Next.js 16.4.6, React 19.3.1, strict TypeScript, Tailwind CSS, Lucide, React Hook Form, Zod, Resend and Upstash. CSS handles transitions and reduced motion; an additional animation runtime was omitted to reduce client weight. Content pages use server rendering so each response can have a fresh CSP nonce. No database, accounts, analytics, uploads or admin system.
+Next.js 16.4.6, React 19.3.1, strict TypeScript, Tailwind CSS, Lucide, React Hook Form, Zod, Resend and Upstash. CSS handles transitions and accessibility preferences. Pointer Events and a small interruptible spring provide hero-swipe feedback without an additional animation runtime. Content pages use server rendering so each response can have a fresh CSP nonce. No database, accounts, analytics, uploads or admin system.
 
 ## Business configuration
 

@@ -10,7 +10,7 @@ The browser suite must run against a **production build**. Set `SITE_URL=http://
 
 Unit/integration tests cover server validation, names/phone/email formats, service allowlist, consent, honeypot, origin checks, content type, streaming body limits, malformed JSON, missing idempotency keys, fail-closed configuration/limiting, email failures, provider acceptance and non-disclosing errors. Delivery and rate-limit dependencies are mocked. Configuration tests ensure unverified data is not published and all 22 supplied services have URLs.
 
-Playwright checks main and service routes, image loads, slider controls, gallery filters/dialog/keyboard focus restoration, form errors, accurate unavailable-delivery feedback, preserved drafts, mobile navigation, 320/375/390/768/1024/1440/1920 widths, axe WCAG AA checks, security headers, unsupported API methods, cross-origin rejection and 404 handling across Chromium, Firefox and WebKit.
+Playwright checks main and service routes, image loads, slider controls, interruptible pointer swipes in both directions, gallery filters/dialog/keyboard focus restoration, form errors, accurate unavailable-delivery feedback, preserved drafts, mobile navigation, 320/375/390/768/1024/1440/1920 widths, axe WCAG AA checks, security headers, unsupported API methods, cross-origin rejection and 404 handling across Chromium, Firefox and WebKit. Chromium additionally exercises native touch-emulation swipes and confirms vertical touch scrolling still works.
 
 ## Manual release verification
 

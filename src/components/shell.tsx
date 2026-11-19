@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X, MapPin, Hammer, ChevronDown } from "lucide-react";
+import { Menu, X, MapPin, Hammer } from "lucide-react";
 import { business, phoneLink, whatsappLink } from "@/lib/business";
 const links = [
   ["/", "Home"],
@@ -42,18 +42,24 @@ export function Header() {
           </span>
         </div>
       </div>
-      <header>
+      <header
+        onKeyDown={(e) => {
+          if (e.key === "Escape") setOpen(false);
+        }}
+      >
         <div className="wrap nav-wrap">
           <Brand />
           <button
             className="menu-button"
             aria-label={open ? "Close navigation" : "Open navigation"}
             aria-expanded={open}
+            aria-controls="primary-navigation"
             onClick={() => setOpen(!open)}
           >
             {open ? <X /> : <Menu />}
           </button>
           <nav
+            id="primary-navigation"
             className={open ? "nav open" : "nav"}
             aria-label="Main navigation"
           >
@@ -65,7 +71,6 @@ export function Header() {
                 onClick={() => setOpen(false)}
               >
                 {label}
-                {href === "/services" && <ChevronDown size={13} />}
               </Link>
             ))}
             <Link
