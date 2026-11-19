@@ -16,7 +16,7 @@ The complete website uses the nine colors supplied by the owner. Shared tokens i
 
 UI contrast determines which colors can be paired: smaller body text uses Iron or Charcoal on Snow, rather than low-contrast light grays. Focus uses a two-tone light/dark ring. Error and success messages use explicit wording and border treatment instead of relying on colored status cues.
 
-The product SVG illustrations and favicon use the same palette. Existing illustrative photography is displayed in grayscale through CSS. The hero, services, detail pages, gallery, contact, privacy, mobile navigation and 404 share this theme. Apple-inspired rounded controls, immediate press feedback, interruptible swipe feedback, and accessibility preference fallbacks remain in place.
+The product visuals use photorealistic AI-generated monochrome images, with provenance and prompts in ASSETS.md. Original SVG illustration sources and the favicon use the same palette. Existing hero photography is displayed in grayscale through CSS. The hero, services, detail pages, gallery, contact, privacy, mobile navigation and 404 share this theme. Apple-inspired rounded controls, immediate press feedback, interruptible swipe feedback, and accessibility preference fallbacks remain in place.
 
 ## Verified for this update
 

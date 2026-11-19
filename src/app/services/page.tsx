@@ -23,9 +23,10 @@ export default function Services() {
               <Link href={"/services/" + c.slug}>
                 <Image
                   src={c.image}
-                  alt={`${c.title} concept illustration`}
-                  width={640}
-                  height={440}
+                  alt={`${c.title} illustrative product visual`}
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 700px) 100vw, 45vw"
                 />
               </Link>
               <div>

@@ -7,3 +7,20 @@
 - `public/favicon.ico`: original S monogram rendered by `scripts/create-favicon.mjs`.
 - The product SVGs and favicon were recolored using the owner's nine-color grayscale palette. The existing hero photograph is displayed with CSS grayscale on the homepage and About page; its source bitmap is preserved.
 - No logos, customer photos, certifications or text copied from the reference website. Layout and visual progression were used as design references.
+
+## Photorealistic product visuals
+
+Six original images were generated with the built-in ImageGen tool, visually reviewed, and saved locally as optimized 1536 × 1024 WebP assets:
+
+- `public/images/products/rolling-shutters.webp`: a steel shopfront shutter.
+- `public/images/products/gates-and-doors.webp`: a fabricated steel sliding entrance gate.
+- `public/images/products/aluminium-work.webp`: an aluminium sliding window.
+- `public/images/products/sheds-and-awnings.webp`: a steel car-parking canopy.
+- `public/images/products/general-fabrication.webp`: a welded steel frame and metal sections.
+- `public/images/products/pvc-fittings.webp`: PVC corner and divider profiles.
+
+The exact generation prompts and output mappings are recorded in [docs/product-image-prompts.json](docs/product-image-prompts.json). All images use monochrome lighting and materials consistent with the owner's grayscale theme. Optimized files range from approximately 99–220 KB each.
+
+These are illustrative AI-generated product visualizations, not photographs of Sahu's premises or completed projects. They replace the original SVG drawings in the active category cards, service listings and details, gallery, related hero slides and homepage gallery preview. A service variant may show a visual of its broader category; the detail-page notice identifies it as a range illustration rather than a verified exact specification. Original SVG sources remain in the repository.
+
+Verification for the product-image update: lint, strict TypeScript and the production build passed. All 21 browser checks passed across Chromium, Firefox and WebKit, including route/image loading, gallery interactions, responsive layouts and the tested accessibility checks. The images and their gallery presentation were also visually reviewed. No real-project photography or verified product specifications are implied by these illustrative assets.

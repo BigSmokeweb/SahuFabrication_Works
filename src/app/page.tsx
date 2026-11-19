@@ -119,8 +119,8 @@ export default function Home() {
               for your next project.
             </h2>
             <p>
-              Browse our illustrated product collection, from shutters and
-              entrance gates to aluminium windows.
+              Browse our product visuals, from shutters and entrance gates to
+              aluminium windows.
             </p>
             <Link className="button dark" href="/gallery">
               Explore the Gallery
@@ -128,16 +128,18 @@ export default function Home() {
           </div>
           <div className="teaser-images">
             <Image
-              src="/images/gate.svg"
-              alt="Fabricated gate concept illustration"
-              width={620}
-              height={440}
+              src="/images/products/gates-and-doors.webp"
+              alt="Fabricated sliding gate, illustrative product visual"
+              width={1200}
+              height={800}
+              sizes="(max-width: 700px) 50vw, 30vw"
             />
             <Image
-              src="/images/window.svg"
-              alt="Aluminium window concept illustration"
-              width={620}
-              height={440}
+              src="/images/products/aluminium-work.webp"
+              alt="Aluminium sliding window, illustrative product visual"
+              width={1200}
+              height={800}
+              sizes="(max-width: 700px) 50vw, 30vw"
             />
           </div>
         </div>

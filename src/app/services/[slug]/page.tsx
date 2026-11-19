@@ -54,13 +54,15 @@ export default async function Service({
         <article>
           <Image
             src={c.image}
-            alt={`${title} illustrative product concept`}
-            width={800}
-            height={550}
+            alt={`${c.title} range, illustrative product visual`}
+            width={1200}
+            height={800}
+            sizes="(max-width: 700px) 100vw, 65vw"
           />
           <p className="notice">
-            Illustrative product concept. Final design, specifications and
-            availability are confirmed for your requirement.
+            Illustrative image of the {c.title.toLowerCase()} range. Final
+            design, specifications and availability are confirmed for your
+            requirement.
           </p>
           <h2>{title} for your space</h2>
           <p>

@@ -4,7 +4,7 @@ import { Gallery } from "@/components/gallery";
 export const metadata: Metadata = {
   title: "Product & Project Gallery",
   description:
-    "Explore illustrated shutter, gate, aluminium window and fabrication concepts from the Sahu Fabrication Works product range.",
+    "Explore shutter, gate, aluminium window and fabrication product visuals from the Sahu Fabrication Works range.",
 };
 export default function GalleryPage() {
   return (
@@ -12,12 +12,12 @@ export default function GalleryPage() {
       <PageHeading
         eyebrow="Gallery"
         title="Explore the possibilities."
-        description="A closer look at our product categories. Select an illustration to explore the details."
+        description="A closer look at our product categories. Select an image to explore the details."
       />
       <section className="section wrap">
         <p className="notice">
-          Product concepts, clearly illustrated. Verified project photography is
-          awaiting owner approval.
+          AI-generated product visuals for illustration. Verified project
+          photography is awaiting owner approval.
         </p>
         <Gallery />
       </section>

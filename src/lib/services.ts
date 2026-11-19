@@ -5,7 +5,7 @@ export const categories = [
     short: "Security that rolls into place.",
     description:
       "Practical shutter solutions for shops, garages, warehouses and everyday commercial spaces. Explore manual and motorised options to suit your opening and how you use it.",
-    image: "/images/shutter.svg",
+    image: "/images/products/rolling-shutters.webp",
     icon: "shutter",
     products: [
       "Gear rolling shutters",
@@ -30,7 +30,7 @@ export const categories = [
     short: "A stronger welcome, made for you.",
     description:
       "Fabricated entrance gates and safety doors designed around your property. Discuss the layout, access needs and finish for a practical, considered entrance.",
-    image: "/images/gate.svg",
+    image: "/images/products/gates-and-doors.webp",
     icon: "gate",
     products: [
       "Safety doors",
@@ -52,7 +52,7 @@ export const categories = [
     short: "Clean lines. Everyday function.",
     description:
       "Aluminium sliding windows and fabrication for homes, offices and commercial spaces. Choose a layout that makes sense for your space and ventilation needs.",
-    image: "/images/window.svg",
+    image: "/images/products/aluminium-work.webp",
     icon: "window",
     products: [
       "Aluminium sliding windows",
@@ -72,7 +72,7 @@ export const categories = [
     short: "Make more of your outdoor space.",
     description:
       "Car parking sheds and awnings planned around the available area, access and everyday use. Dimensions, supports and materials are discussed for each site.",
-    image: "/images/shed.svg",
+    image: "/images/products/sheds-and-awnings.webp",
     icon: "shed",
     products: ["Car parking sheds", "Awnings"],
     features: [
@@ -88,7 +88,7 @@ export const categories = [
     short: "Your requirement. Our craft.",
     description:
       "General and construction-related metal fabrication for practical building needs. Share your drawing, measurements or idea to discuss a suitable way forward.",
-    image: "/images/fabrication.svg",
+    image: "/images/products/general-fabrication.webp",
     icon: "fabrication",
     products: ["General fabrication", "Construction-related fabrication"],
     features: [
@@ -104,7 +104,7 @@ export const categories = [
     short: "The details that bring it together.",
     description:
       "PVC divider and corner fittings for finishing and joining requirements. Discuss the profile, dimensions and intended application before ordering.",
-    image: "/images/pvc.svg",
+    image: "/images/products/pvc-fittings.webp",
     icon: "pvc",
     products: ["PVC divider fittings", "PVC corner fittings"],
     features: [

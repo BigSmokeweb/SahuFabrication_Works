@@ -33,7 +33,7 @@ const slides = [
       </>
     ),
     text: "Manual and motorised sliding gates, fabricated gates and safety doors for your property.",
-    image: "/images/gate.svg",
+    image: "/images/products/gates-and-doors.webp",
     link: "/services/gates-and-doors",
   },
   {
@@ -46,7 +46,7 @@ const slides = [
       </>
     ),
     text: "Aluminium sliding windows and fabrication solutions for homes and commercial spaces.",
-    image: "/images/window.svg",
+    image: "/images/products/aluminium-work.webp",
     link: "/services/aluminium-work",
   },
 ];

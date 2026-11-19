@@ -57,9 +57,10 @@ export function Gallery() {
               >
                 <Image
                   src={c.image}
-                  alt={`${c.title} concept illustration`}
-                  width={640}
-                  height={440}
+                  alt={`${c.title} illustrative product visual`}
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw"
                 />
                 <span>{c.title}</span>
               </button>
@@ -68,7 +69,7 @@ export function Gallery() {
       </div>
       <p className="empty-note">
         Completed-project photographs will be added after owner approval. The
-        visuals above are original product illustrations and do not represent
+        visuals above are AI-generated product images and do not represent
         completed Sahu projects.
       </p>
       <dialog
@@ -94,13 +95,14 @@ export function Gallery() {
             </button>
             <Image
               src={active.image}
-              alt={`${active.title} concept illustration enlarged`}
-              width={900}
-              height={620}
+              alt={`${active.title} illustrative product visual enlarged`}
+              width={1200}
+              height={800}
+              sizes="(max-width: 820px) 100vw, 820px"
             />
             <h2 id="gallery-title">{active.title}</h2>
             <p>
-              {active.short} Original product illustration; not a
+              {active.short} AI-generated product visual; not a
               completed-project photograph.
             </p>
           </div>
