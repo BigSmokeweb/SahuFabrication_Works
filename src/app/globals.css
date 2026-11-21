@@ -671,16 +671,13 @@ header {
 .visit-arrow {
   display: block;
   margin-top: 24px;
-  width: min(280px, 90%);
+  width: min(300px, 90%);
   color: var(--snow);
 }
 .visit-arrow svg {
   width: 100%;
   height: auto;
-  stroke: currentColor;
-  stroke-width: 3;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  fill: currentColor;
 }
 .visit-arrow .visit-arrow-down {
   display: none;
