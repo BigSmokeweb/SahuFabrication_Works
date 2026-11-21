@@ -12,7 +12,7 @@ export default function Home() {
           <div className="dot-pattern" />
           <Image
             src="/images/hero.webp"
-            alt="Illustrative steel shutter showing slatted fabrication details"
+            alt="Steel shutter showing slatted fabrication details"
             width={760}
             height={700}
           />
@@ -129,14 +129,14 @@ export default function Home() {
           <div className="teaser-images">
             <Image
               src="/images/products/gates-and-doors.webp"
-              alt="Fabricated sliding gate, illustrative product visual"
+              alt="Fabricated sliding gate"
               width={1200}
               height={800}
               sizes="(max-width: 700px) 50vw, 30vw"
             />
             <Image
               src="/images/products/aluminium-work.webp"
-              alt="Aluminium sliding window, illustrative product visual"
+              alt="Aluminium sliding window"
               width={1200}
               height={800}
               sizes="(max-width: 700px) 50vw, 30vw"

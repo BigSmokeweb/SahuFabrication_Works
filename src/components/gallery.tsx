@@ -57,7 +57,7 @@ export function Gallery() {
               >
                 <Image
                   src={c.image}
-                  alt={`${c.title} illustrative product visual`}
+                  alt={c.title}
                   width={1200}
                   height={800}
                   sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw"
@@ -95,7 +95,7 @@ export function Gallery() {
             </button>
             <Image
               src={active.image}
-              alt={`${active.title} illustrative product visual enlarged`}
+              alt={`${active.title}, enlarged view`}
               width={1200}
               height={800}
               sizes="(max-width: 820px) 100vw, 820px"

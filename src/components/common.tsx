@@ -104,12 +104,11 @@ export function ServiceCards({ limit = 6 }: { limit?: number }) {
           <div className="service-image">
             <Image
               src={c.image}
-              alt={`${c.title} illustrative product visual`}
+              alt={c.title}
               width={1200}
               height={800}
               sizes="(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 33vw"
             />
-            <span className="small-label">ILLUSTRATIVE VISUAL</span>
           </div>
           <div className="service-copy">
             <h3>{c.title}</h3>

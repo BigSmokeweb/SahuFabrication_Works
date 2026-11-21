@@ -199,11 +199,7 @@ export function Hero() {
           <Image
             className="hero-image"
             src={s.image}
-            alt={
-              active === 0
-                ? "Illustrative steel rolling shutter in a workshop"
-                : "Illustrative " + s.tag.toLowerCase()
-            }
+            alt={active === 0 ? "Steel rolling shutter in a workshop" : s.tag}
             fill
             priority
             sizes="100vw"
@@ -253,7 +249,6 @@ export function Hero() {
             </div>
           </div>
         </div>
-        <span className="hero-disclosure">Illustrative product visual</span>
       </section>
       <section className="trust-strip">
         <div className="wrap">

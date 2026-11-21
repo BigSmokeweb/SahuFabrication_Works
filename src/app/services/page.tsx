@@ -23,7 +23,7 @@ export default function Services() {
               <Link href={"/services/" + c.slug}>
                 <Image
                   src={c.image}
-                  alt={`${c.title} illustrative product visual`}
+                  alt={c.title}
                   width={1200}
                   height={800}
                   sizes="(max-width: 700px) 100vw, 45vw"

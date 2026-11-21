@@ -21,7 +21,7 @@ export default function About() {
             src="/images/hero.webp"
             width={760}
             height={700}
-            alt="Illustrative rolling shutter facade"
+            alt="Rolling shutter facade"
           />
           <div className="visual-caption">
             <strong>Sahu Fabrication Works</strong>
