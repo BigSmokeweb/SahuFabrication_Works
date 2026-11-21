@@ -9,3 +9,23 @@ coverage/
 .vercel/
 reports/
 src/lib/business-pending.ts
+
+# Local design sources, exports and working notes (preserved on disk).
+/ASSETS.md
+/PALETTE.md
+/RELEASE-REPORT.md
+/TESTING.md
+/UI-FIX-REPORT.md
+/FIX_INSTRUCTIONS_SAHU_FABRICATION.md
+/docs/product-image-prompts.json
+/docs/motion/*
+!/docs/motion/sahu-built-in-motion.gif
+/scripts/
+/public/images/fabrication.svg
+/public/images/gate.svg
+/public/images/pvc.svg
+/public/images/shed.svg
+/public/images/shutter.svg
+/public/images/window.svg
+/public/images/sahu-logo.png
+/public/images/sahu-logo.svg

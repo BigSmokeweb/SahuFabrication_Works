@@ -1,14 +1,14 @@
 # Sahu Fabrication Works
 
-Responsive Next.js website for a fabrication business in Thane West. Based on the layout, image slider, introduction, service presentation and enquiry/footer progression of the supplied House of Fabrication reference, with the red, white and warm orange branding from the owner's company card. A reconstructed fabric awning sits above the company name in the header and footer. Original copy and illustrations are used; no reference-site photographs or claims were reused. See [PALETTE.md](PALETTE.md) for the current brand colors and their roles.
+Responsive Next.js website for Sahu Fabrication Works in Thane West, with red, white and warm orange branding from the company's business card.
 
 ## Built in motion
 
 ![Sahu Fabrication Works — assembling shutters, sliding gates, aluminium windows and the red-and-white awning](docs/motion/sahu-built-in-motion.gif)
 
-A silent 25-second company motion edit. Download the [standalone HTML](docs/motion/index.html) and open it in a browser to watch the full-resolution loop, including offline. Press **Space** to pause or **R** to replay; add `?debug=1` to the file URL for a review scrubber. Reduced-motion preferences show the closing brand frame instead of autoplaying.
+A silent 25-second company motion edit. Its editable HTML, rendering script and license notices are retained in the owner's local project folder.
 
-Created with [Bang Motion](https://github.com/bangtutorial/bang-motion), using the company logo and existing product visuals. The product images are AI-generated visualizations. Re-render the README GIF with `node scripts/render-company-motion.mjs` after installing the project's dependencies, Chromium (`npx playwright install chromium`) and FFmpeg. See [asset provenance](ASSETS.md) and the licenses alongside the HTML.
+Created with [Bang Motion](https://github.com/bangtutorial/bang-motion), using the company logo and existing product visuals. Product imagery is AI-generated and does not represent completed Sahu projects. The animation uses Barlow Condensed under the SIL Open Font License.
 
 ## Development
 
@@ -58,8 +58,8 @@ npm audit
 npm audit --omit=dev
 ```
 
-See [TESTING.md](TESTING.md), [SECURITY.md](SECURITY.md), [DEPLOYMENT.md](DEPLOYMENT.md) and [RELEASE-REPORT.md](RELEASE-REPORT.md). `ASSETS.md` documents image provenance.
+CI runs lint, TypeScript, unit tests, dependency audits, the production build and browser tests. Separate workflows scan for secrets and run CodeQL. See [SECURITY.md](SECURITY.md) and [DEPLOYMENT.md](DEPLOYMENT.md) for operational requirements.
 
 ## Repository and release
 
-The existing repository is https://github.com/BigSmokeweb/SahuFabrication_Works. It was empty when cloned. At the owner's request, the implementation history starts with a fresh initial commit under Milind Sahu, and only `main` is retained. Scheduled Dependabot version-update PRs are paused with an open-PR limit of zero. No production promotion is implied by publishing source or by a successful local build. Owner-approved contact data, delivery configuration, controlled real-email testing, and deployment verification remain release gates.
+Only `main` is retained. Commits are authored by Milind Sahu. Scheduled Dependabot version-update PRs are paused at the owner's request. Publishing source does not deploy the website. Verified phone details, enquiry delivery setup and deployment verification remain pending.
