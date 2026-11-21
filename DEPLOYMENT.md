@@ -9,7 +9,7 @@
 5. Provision Upstash Redis and set its HTTPS REST URL/token. Generate a high-entropy `RATE_LIMIT_SALT` and store it as a secret. Set expirations/retention and access controls in the provider. Do not commit actual values.
 6. Confirm the call/WhatsApp number and full address in `src/lib/business.ts`. Confirm the establishment year before adding it to business copy. Add verified LocalBusiness JSON-LD and canonical metadata after the domain/location are approved.
 7. Approve the privacy contact and a retention/deletion schedule. Replace illustrative concepts with approved real photographs as available.
-8. Run the checks listed in README.md, submit one controlled enquiry to the approved recipient, confirm actual inbox receipt, then test failure handling and the shared limiter across separate instances. No email was sent in local tests.
+8. Run the checks listed in TECHNICAL.md, submit one controlled enquiry to the approved recipient, confirm actual inbox receipt, then test failure handling and the shared limiter across separate instances. No email was sent in local tests.
 
 ## Production approval
 
