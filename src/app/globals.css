@@ -671,7 +671,7 @@ header {
 .visit-arrow {
   display: block;
   margin-top: 24px;
-  width: min(300px, 90%);
+  width: min(240px, 90%);
   color: var(--snow);
 }
 .visit-arrow svg {
@@ -1506,7 +1506,7 @@ footer .brand strong {
     padding-bottom: 32px;
   }
   .visit-arrow {
-    width: 64px;
+    width: 52px;
     margin-top: 20px;
     margin-left: 12px;
   }
