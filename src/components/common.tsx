@@ -61,11 +61,14 @@ export function CTA() {
             Google Maps. Choose your starting point for directions.
           </p>
           <span className="visit-arrow" aria-hidden="true">
-            <svg className="visit-arrow-wide" viewBox="0 0 280 108">
-              <path d="M8 38H190V10L270 54L190 98V70H8Z" />
+            <svg className="visit-arrow-wide" viewBox="0 0 320 116">
+              <path d="M8 27C92 90 184 95 252 40L237 24L310 10L285 81L272 65C194 121 96 106 8 27Z" />
             </svg>
-            <svg className="visit-arrow-down" viewBox="0 0 108 124">
-              <path d="M38 8H70V68H98L54 116L10 68H38Z" />
+            <svg className="visit-arrow-down" viewBox="0 0 116 320">
+              <path
+                d="M8 27C92 90 184 95 252 40L237 24L310 10L285 81L272 65C194 121 96 106 8 27Z"
+                transform="translate(116 0) rotate(90)"
+              />
             </svg>
           </span>
         </div>
