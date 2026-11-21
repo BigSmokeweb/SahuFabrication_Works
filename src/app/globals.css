@@ -671,6 +671,8 @@ header {
 .visit-arrow {
   display: block;
   margin-top: 24px;
+  margin-left: auto;
+  margin-right: -32px;
   width: min(240px, 90%);
   color: var(--snow);
 }
