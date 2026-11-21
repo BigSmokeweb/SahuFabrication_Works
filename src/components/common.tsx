@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { categories } from "@/lib/services";
 import { business, directionsLink, mapEmbedLink } from "@/lib/business";
-import { ArrowRight, ArrowUpRight, MapPin } from "lucide-react";
+import { ArrowUpRight, MapPin } from "lucide-react";
 export function PageHeading({
   eyebrow,
   title,
@@ -60,12 +60,14 @@ export function CTA() {
             Our workshop is beside New Lucky Auto Parts, the landmark shown in
             Google Maps. Choose your starting point for directions.
           </p>
-          <ArrowRight
-            className="visit-arrow"
-            size={72}
-            strokeWidth={1.25}
-            aria-hidden="true"
-          />
+          <span className="visit-arrow" aria-hidden="true">
+            <svg className="visit-arrow-wide" viewBox="0 0 280 90" fill="none">
+              <path d="M10 68C92 80 150 15 264 26M244 8L264 26L242 43" />
+            </svg>
+            <svg className="visit-arrow-down" viewBox="0 0 72 108" fill="none">
+              <path d="M18 8C60 12 54 58 36 96M22 77L36 96L56 83" />
+            </svg>
+          </span>
         </div>
         <div className="visit-map">
           <iframe

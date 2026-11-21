@@ -671,8 +671,19 @@ header {
 .visit-arrow {
   display: block;
   margin-top: 24px;
-  width: 112px;
-  height: 56px;
+  width: min(280px, 90%);
+  color: var(--snow);
+}
+.visit-arrow svg {
+  width: 100%;
+  height: auto;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.visit-arrow .visit-arrow-down {
+  display: none;
 }
 .cta .eyebrow {
   color: var(--alabaster);
@@ -1498,9 +1509,15 @@ footer .brand strong {
     padding-bottom: 32px;
   }
   .visit-arrow {
-    transform: rotate(90deg);
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    margin-top: 20px;
+    margin-left: 12px;
+  }
+  .visit-arrow .visit-arrow-wide {
+    display: none;
+  }
+  .visit-arrow .visit-arrow-down {
+    display: block;
   }
   .visit-map iframe {
     height: 280px;
