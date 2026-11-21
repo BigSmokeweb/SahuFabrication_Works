@@ -6,11 +6,15 @@ export function proxy(request: NextRequest) {
     request.nextUrl.hostname,
   );
   const csp = `default-src 'self'; script-src 'self' 'nonce-${nonce}' 'strict-dynamic'${dev ? " 'unsafe-eval'" : ""}; style-src 'self' 'nonce-${nonce}'; style-src-attr 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'${dev ? " ws: wss:" : ""}; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';${dev || localPreview ? "" : " upgrade-insecure-requests;"}`;
+  const mapCsp = csp.replace(
+    "object-src 'none';",
+    "object-src 'none'; frame-src https://www.google.com;",
+  );
   const headers = new Headers(request.headers);
   headers.set("x-nonce", nonce);
-  headers.set("Content-Security-Policy", csp);
+  headers.set("Content-Security-Policy", mapCsp);
   const response = NextResponse.next({ request: { headers } });
-  response.headers.set("Content-Security-Policy", csp);
+  response.headers.set("Content-Security-Policy", mapCsp);
   return response;
 }
 export const config = {

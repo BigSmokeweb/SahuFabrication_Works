@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { categories } from "@/lib/services";
+import { business, directionsLink, mapEmbedLink } from "@/lib/business";
+import { ArrowUpRight, MapPin } from "lucide-react";
 export function PageHeading({
   eyebrow,
   title,
@@ -29,14 +31,50 @@ export function CTA() {
   return (
     <section className="cta">
       <div className="wrap">
-        <div>
+        <div className="cta-enquiry">
           <p className="eyebrow">LET’S BUILD SOMETHING THAT FITS</p>
           <h2>Good work starts with a conversation.</h2>
           <p>Share your measurements, your idea, or simply what you need.</p>
+          <Link className="button white" href="/contact#enquiry">
+            Request a Quote
+          </Link>
         </div>
-        <Link className="button white" href="/contact#enquiry">
-          Request a Quote
-        </Link>
+        <div className="cta-visit">
+          <p className="eyebrow">COME SAY HELLO</p>
+          <h2>Visit us for a better understanding.</h2>
+          <p>
+            Let’s discuss your ideas, materials and the right fit for your space
+            in person.
+          </p>
+          <div className="visit-map">
+            <iframe
+              title="Map to nearby Riddhi Siddhi Building in Louise Wadi, Thane West"
+              src={mapEmbedLink}
+              loading="lazy"
+              referrerPolicy="no-referrer"
+              allowFullScreen
+            />
+            <div className="visit-location">
+              <MapPin size={20} aria-hidden="true" />
+              <div>
+                <strong>{business.name}</strong>
+                <p>{business.verifiedAddress}</p>
+              </div>
+            </div>
+          </div>
+          <a
+            className="button white"
+            href={directionsLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Directions <ArrowUpRight size={18} aria-hidden="true" />
+          </a>
+          <p className="visit-help">
+            Directions to nearby Riddhi Siddhi Building. Choose your starting
+            point in Google Maps.
+          </p>
+        </div>
       </div>
     </section>
   );

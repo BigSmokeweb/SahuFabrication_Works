@@ -646,10 +646,18 @@ header {
   padding-block: 58px;
 }
 .cta > .wrap {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 40px;
+  gap: 64px;
+}
+.cta-enquiry,
+.cta-visit {
+  min-width: 0;
+}
+.cta-visit {
+  border-left: 1px solid #ffffff40;
+  padding-left: 48px;
 }
 .cta .eyebrow {
   color: var(--alabaster);
@@ -659,10 +667,53 @@ header {
 .cta h2 {
   font-size: 32px;
 }
-.cta p:last-child {
+.cta-enquiry > p:not(.eyebrow),
+.cta-visit > p:not(.eyebrow) {
   color: var(--alabaster);
   margin-top: 12px;
   font-size: 14px;
+}
+.cta .button {
+  margin-top: 24px;
+}
+.visit-map {
+  margin-top: 24px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--snow);
+  color: var(--ink);
+  box-shadow: 0 12px 32px #27201c1a;
+}
+.visit-map iframe {
+  width: 100%;
+  height: 240px;
+  border: 0;
+  display: block;
+  background: var(--platinum);
+}
+.visit-location {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px;
+}
+.visit-location > svg {
+  flex-shrink: 0;
+  color: var(--accent);
+  margin-top: 3px;
+}
+.visit-location strong {
+  font-size: 15px;
+}
+.visit-location p {
+  margin-top: 5px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.cta-visit > p.visit-help {
+  font-size: 12px;
+  margin-top: 10px;
 }
 footer {
   background: var(--charcoal);
@@ -1419,8 +1470,14 @@ footer .brand strong {
   }
   .cta > .wrap {
     align-items: flex-start;
-    flex-direction: column;
-    gap: 28px;
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .cta-visit {
+    border-left: 0;
+    border-top: 1px solid #ffffff40;
+    padding-left: 0;
+    padding-top: 36px;
   }
   .cta h2 {
     font-size: 30px;

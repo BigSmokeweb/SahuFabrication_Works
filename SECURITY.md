@@ -26,3 +26,5 @@ Do not publish customer data, credentials or exploit details in a public issue. 
 This is not a claim of full OWASP ASVS or WCAG certification. See the release report for actual checks and outstanding tests. Upstream email/hosting behavior, production TLS, distributed quota enforcement and real deliverability require staging verification. Rotate any exposed key immediately and redeploy; never paste keys into source or chat.
 
 Incident response: disable enquiry delivery by removing its Resend key from the affected deployment, preserve safe operational timestamps, assess scope, rotate credentials, repair and retest, then restore a known-good release. Do not log enquiry payloads while investigating. Confirm a retention and deletion schedule covering Resend, Upstash and the business mailbox before launch.
+
+- The visit section allows Google Maps embeds through a host-specific frame-src for https://www.google.com. Script, connection and frame-ancestor restrictions are preserved. Map navigation opens with noopener/noreferrer and omits a fixed origin; this application does not request geolocation. The privacy notice describes the external map service.

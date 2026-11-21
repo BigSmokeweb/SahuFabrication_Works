@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { PageHeading } from "@/components/common";
 import { EnquiryForm } from "@/components/enquiry-form";
-import { business, phoneLink, whatsappLink } from "@/lib/business";
+import {
+  business,
+  directionsLink,
+  phoneLink,
+  whatsappLink,
+} from "@/lib/business";
 export const metadata: Metadata = {
   title: "Contact & Enquiry",
   description:
@@ -49,10 +54,7 @@ export default async function Contact({
               <>
                 <p>{business.verifiedAddress}</p>
                 <a
-                  href={
-                    "https://www.google.com/maps/search/?api=1&query=" +
-                    encodeURIComponent(business.verifiedAddress)
-                  }
+                  href={directionsLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

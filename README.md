@@ -33,7 +33,7 @@ Next.js 16.4.6, React 19.3.1, strict TypeScript, Tailwind CSS, Lucide, React Hoo
 
 ## Business configuration
 
-Edit `src/lib/business.ts`. Phone numbers, full address and 1970 establishment date remain **unverified**. They are excluded from rendered pages and structured data. Call, WhatsApp and precise map links activate only when the corresponding verified configuration is supplied. The owner asked to complete these steps later.
+Edit `src/lib/business.ts`. The owner confirmed the card address: Eastern Express Highway, near Riddhi Siddhi Building, Louise Wadi, Thane West 400604. The shared enquiry section now includes a second visit column with an embedded map and directions to nearby Riddhi Siddhi CHS. An exact workshop pin has not been supplied; the map identifies the nearby landmark. Directions omit a fixed origin so visitors can choose their own starting point in Google Maps. Phone numbers and the 1970 establishment date remain **unverified** and excluded. Call and WhatsApp links remain disabled.
 
 All 22 supplied services are represented across six categories. Stainless steel grades, certifications, statistics, reviews and guarantees are intentionally absent until verified.
 

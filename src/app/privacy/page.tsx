@@ -56,9 +56,12 @@ export default function Privacy() {
         <h2>Cookies and external services</h2>
         <p>
           No advertising cookies or analytics are installed by this application.
-          Call, WhatsApp and map links are enabled only after the business
-          confirms its contact details. Opening these links takes you to the
-          relevant external service and its privacy terms.
+          The embedded Google Map loads from Google and may send Google your
+          network address and browser information or use cookies under its own
+          privacy terms. Get Directions opens Google Maps, where you can choose
+          a starting point or allow Google to use your location. This website
+          does not request or store your current location. Call and WhatsApp
+          links remain unavailable until the business confirms its phone number.
         </p>
         <h2>Your choice</h2>
         <p>
