@@ -35,13 +35,6 @@ export function Header() {
       <a href="#main" className="skip">
         Skip to content
       </a>
-      <div className="topbar">
-        <div className="wrap">
-          <span>
-            <MapPin size={13} /> {business.locality}
-          </span>
-        </div>
-      </div>
       <header
         onKeyDown={(e) => {
           if (e.key === "Escape") setOpen(false);
