@@ -4,7 +4,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X, MapPin } from "lucide-react";
-import { business, mapEmbedLink } from "@/lib/business";
+import { business, phoneLink, whatsappLink } from "@/lib/business";
 const links = [
   ["/", "Home"],
   ["/about", "About Us"],
@@ -117,14 +117,22 @@ export function Footer() {
           <Link href="/services/aluminium-work">Aluminium work</Link>
           <Link href="/services/sheds-and-awnings">Sheds & awnings</Link>
         </div>
-        <div className="footer-map">
-          <iframe
-            title="Workshop area map: nearby Riddhi Siddhi Building, Louise Wadi"
-            src={mapEmbedLink}
-            loading="lazy"
-            referrerPolicy="no-referrer"
-            allowFullScreen
-          />
+        <div>
+          <h2>Let’s talk fabrication.</h2>
+          <p>
+            Have a requirement in mind?
+            <br />
+            Tell us about your space.
+          </p>
+          <Link className="button primary" href="/contact">
+            Make an Enquiry
+          </Link>
+          {business.verifiedPhone && (
+            <>
+              <a href={phoneLink(business.verifiedPhone)}>Call us</a>
+              <a href={whatsappLink(business.verifiedPhone)}>WhatsApp</a>
+            </>
+          )}
         </div>
       </div>
       <div className="wrap footer-bottom">
