@@ -2,6 +2,14 @@
 
 Responsive Next.js website for a fabrication business in Thane West. Based on the layout, image slider, introduction, service presentation and enquiry/footer progression of the supplied House of Fabrication reference, with the red, white and warm orange branding from the owner's company card. A reconstructed fabric awning sits above the company name in the header and footer. Original copy and illustrations are used; no reference-site photographs or claims were reused. See [PALETTE.md](PALETTE.md) for the current brand colors and their roles.
 
+## Built in motion
+
+![Sahu Fabrication Works — assembling shutters, sliding gates, aluminium windows and the red-and-white awning](docs/motion/sahu-built-in-motion.gif)
+
+A silent 25-second company motion edit. Download the [standalone HTML](docs/motion/index.html) and open it in a browser to watch the full-resolution loop, including offline. Press **Space** to pause or **R** to replay; add `?debug=1` to the file URL for a review scrubber. Reduced-motion preferences show the closing brand frame instead of autoplaying.
+
+Created with [Bang Motion](https://github.com/bangtutorial/bang-motion), using the company logo and existing product visuals. The product images are AI-generated visualizations. Re-render the README GIF with `node scripts/render-company-motion.mjs` after installing the project's dependencies, Chromium (`npx playwright install chromium`) and FFmpeg. See [asset provenance](ASSETS.md) and the licenses alongside the HTML.
+
 ## Development
 
 Use Node.js 24 LTS and npm. This workspace was also tested with Node.js 26.13.0.
