@@ -4,14 +4,14 @@ export const business = {
   // Phone and establishment year still await owner confirmation.
   verifiedPhone: null as string | null,
   verifiedAddress:
-    "Eastern Express Highway, near Riddhi Siddhi Building, Louise Wadi, Thane West, Maharashtra 400604",
+    "Beside New Lucky Auto Parts, near Riddhi Siddhi Apartment, Louis Wadi, Thane West, Thane, Maharashtra 400604, India",
   established: null as number | null,
   siteUrl: process.env.SITE_URL || null,
 };
-// Route to the named landmark on the confirmed card. An exact workshop pin
-// has not been supplied, and free-text searches can return other businesses.
+// The owner confirmed the workshop is beside this mapped shop. Use that
+// landmark for navigation until Sahu Fabrication Works has its own listing.
 export const mapDestination =
-  "Riddhi Siddhi CHS, Louis Wadi, Thane West, Maharashtra 400604";
+  "NEW LUCKY AUTO PARTS, near Riddhi Siddhi Apartment, Louis Wadi, Thane West, Thane, Maharashtra 400604, India";
 export const directionsLink =
   "https://www.google.com/maps/dir/?api=1&destination=" +
   encodeURIComponent(mapDestination);

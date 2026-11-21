@@ -33,7 +33,7 @@ Next.js 16.4.6, React 19.3.1, strict TypeScript, Tailwind CSS, Lucide, React Hoo
 
 ## Business configuration
 
-Edit `src/lib/business.ts`. The owner confirmed the card address: Eastern Express Highway, near Riddhi Siddhi Building, Louise Wadi, Thane West 400604. The shared enquiry section now includes a second visit column with an embedded map and directions to nearby Riddhi Siddhi CHS. An exact workshop pin has not been supplied; the map identifies the nearby landmark. Directions omit a fixed origin so visitors can choose their own starting point in Google Maps. Phone numbers and the 1970 establishment date remain **unverified** and excluded. Call and WhatsApp links remain disabled.
+Edit `src/lib/business.ts`. The owner confirmed the workshop is beside New Lucky Auto Parts, near Riddhi Siddhi Apartment, Louis Wadi, Thane West, Thane, Maharashtra 400604, India. The visit section displays Sahu Fabrication Works and uses the neighbouring New Lucky Auto Parts listing for the embedded map and directions. Sahu does not yet have its own map listing; the website identifies the neighbouring shop as a landmark. Directions omit a fixed origin so visitors can choose their own starting point in Google Maps. Phone numbers and the 1970 establishment date remain **unverified** and excluded. Call and WhatsApp links remain disabled.
 
 All 22 supplied services are represented across six categories. Stainless steel grades, certifications, statistics, reviews and guarantees are intentionally absent until verified.
 

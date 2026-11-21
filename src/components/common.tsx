@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { categories } from "@/lib/services";
 import { business, directionsLink, mapEmbedLink } from "@/lib/business";
-import { ArrowUpRight, MapPin } from "lucide-react";
+import { ArrowRight, ArrowUpRight, MapPin } from "lucide-react";
 export function PageHeading({
   eyebrow,
   title,
@@ -32,9 +32,11 @@ export function CTA() {
     <section className="cta">
       <div className="wrap">
         <div className="cta-enquiry">
-          <p className="eyebrow">LET’S BUILD SOMETHING THAT FITS</p>
-          <h2>Good work starts with a conversation.</h2>
-          <p>Share your measurements, your idea, or simply what you need.</p>
+          <div>
+            <p className="eyebrow">LET’S BUILD SOMETHING THAT FITS</p>
+            <h2>Good work starts with a conversation.</h2>
+            <p>Share your measurements, your idea, or simply what you need.</p>
+          </div>
           <Link className="button white" href="/contact#enquiry">
             Request a Quote
           </Link>
@@ -46,22 +48,6 @@ export function CTA() {
             Let’s discuss your ideas, materials and the right fit for your space
             in person.
           </p>
-          <div className="visit-map">
-            <iframe
-              title="Map to nearby Riddhi Siddhi Building in Louise Wadi, Thane West"
-              src={mapEmbedLink}
-              loading="lazy"
-              referrerPolicy="no-referrer"
-              allowFullScreen
-            />
-            <div className="visit-location">
-              <MapPin size={20} aria-hidden="true" />
-              <div>
-                <strong>{business.name}</strong>
-                <p>{business.verifiedAddress}</p>
-              </div>
-            </div>
-          </div>
           <a
             className="button white"
             href={directionsLink}
@@ -71,9 +57,31 @@ export function CTA() {
             Get Directions <ArrowUpRight size={18} aria-hidden="true" />
           </a>
           <p className="visit-help">
-            Directions to nearby Riddhi Siddhi Building. Choose your starting
-            point in Google Maps.
+            Our workshop is beside New Lucky Auto Parts, the landmark shown in
+            Google Maps. Choose your starting point for directions.
           </p>
+          <ArrowRight
+            className="visit-arrow"
+            size={72}
+            strokeWidth={1.25}
+            aria-hidden="true"
+          />
+        </div>
+        <div className="visit-map">
+          <iframe
+            title="Sahu Fabrication Works location, beside New Lucky Auto Parts in Louis Wadi"
+            src={mapEmbedLink}
+            loading="lazy"
+            referrerPolicy="no-referrer"
+            allowFullScreen
+          />
+          <div className="visit-location">
+            <MapPin size={20} aria-hidden="true" />
+            <div>
+              <strong>{business.name}</strong>
+              <p>{business.verifiedAddress}</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
