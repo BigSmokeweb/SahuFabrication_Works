@@ -1,32 +1,23 @@
-# Sahu Fabrication Works — monochrome palette
+# Sahu Fabrication Works — company brand palette
 
-The complete website uses the nine colors supplied by the owner. Shared tokens in `src/app/globals.css` control every page and UI state.
+The website follows the owner's photographed business card: a red-and-white fabric awning above the company name in warm orange. These are digital interpretations of the photographed colors, rather than calibrated print color values. Shared tokens in `src/app/globals.css` apply the theme across every page.
 
-| Token     | Hex       | Role                                            |
-| --------- | --------- | ----------------------------------------------- |
-| Snow      | `#F8F9FA` | Page/card surfaces and text on dark backgrounds |
-| Platinum  | `#E9ECEF` | Alternate sections and muted light text         |
-| Alabaster | `#DEE2E6` | Subtle separators and light surfaces            |
-| Silver    | `#CED4DA` | Image backgrounds and borders                   |
-| Slate     | `#ADB5BD` | Supporting detail on dark surfaces              |
-| Gray      | `#6C757D` | Secondary graphics and control outlines         |
-| Iron      | `#495057` | Body text, secondary text and hover states      |
-| Gunmetal  | `#343A40` | Primary actions and dark panels                 |
-| Charcoal  | `#212529` | Headings, navigation, hero overlays and footer  |
+| Color          | Hex                                        | Role                                                       |
+| -------------- | ------------------------------------------ | ---------------------------------------------------------- |
+| Fabric red     | `#BE2631`                                  | Alternating stripes in the awning logo                     |
+| White          | `#FFFFFF`                                  | Fabric stripes, header, cards and page surfaces            |
+| Action red     | `#B5222A`                                  | Primary buttons, active navigation, icons and CTA sections |
+| Deep red       | `#921B22`                                  | Button hover state                                         |
+| Warm orange    | `#A85021`                                  | Company name below the awning                              |
+| Light orange   | `#F0B187`                                  | Company name on the dark footer                            |
+| Warm off-white | `#F7F4F1`                                  | Alternate light sections                                   |
+| Warm neutrals  | `#E8DED5`, `#D6C8BC`, `#B9ACA1`, `#7C7168` | Borders, surfaces and supporting details                   |
+| Dark neutrals  | `#51453D`, `#3B302A`, `#27201C`            | Readable text, dark panels and footer                      |
 
-UI contrast determines which colors can be paired: smaller body text uses Iron or Charcoal on Snow, rather than low-contrast light grays. Focus uses a two-tone light/dark ring. Error and success messages use explicit wording and border treatment instead of relying on colored status cues.
+The red and orange brand colors replace the earlier monochrome UI. Illustrative product photographs remain grayscale. Explicit status wording, visible focus indicators, reduced-motion fallbacks and responsive controls remain in place.
 
-The product visuals use photorealistic AI-generated monochrome images, with provenance and prompts in ASSETS.md. Original SVG illustration sources and the favicon use the same palette. Existing hero photography is displayed in grayscale through CSS. The hero, services, detail pages, gallery, contact, privacy, mobile navigation and 404 share this theme. Apple-inspired rounded controls, immediate press feedback, interruptible swipe feedback, and accessibility preference fallbacks remain in place.
+## Verification
 
-## Verified for this update
+Production build, ESLint and strict TypeScript passed. All 21 Playwright checks passed across Chromium, Firefox and WebKit for this branding update, covering pages and images, navigation, gallery, forms, responsive layouts, accessibility and response headers. The final mobile logo typography was checked again with the responsive and accessibility browser tests. Desktop and mobile screenshots are saved locally in `reports/brand/`.
 
-- Production build, ESLint and strict TypeScript passed.
-- All 27 unit/integration tests passed.
-- All 21 Playwright checks passed across Chromium, Firefox and WebKit (7 checks per browser).
-- No horizontal overflow at 320, 375, 390, 768, 1024, 1440 and 1920px.
-- No axe violations for the tested WCAG AA tags on the representative pages and mobile homepage.
-- All main and category/product routes and their images loaded in the browser suite; navigation, hero swipes, gallery controls, form validation and response headers passed.
-- Source audit of the shared stylesheet and six SVG illustrations found zero base colors outside the nine supplied palette colors. Alpha variants are used for overlays and shadows.
-- Desktop homepage, product cards, contact and gallery, plus the mobile homepage, were visually reviewed. Local screenshots are in `reports/palette/`.
-
-No dependency or backend behavior changes were needed for the palette update. Real enquiry delivery remains unconfigured pending owner-approved contact information and provider credentials. No production deployment was performed. Earlier Lighthouse scores describe earlier revisions; Lighthouse was not rerun for this palette change.
+No dependency or enquiry-backend changes were made. Contact details from the card were not imported; verified contact configuration remains pending. No production deployment was performed.

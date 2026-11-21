@@ -1,18 +1,21 @@
 @import "tailwindcss";
 :root {
-  --snow: #f8f9fa;
-  --platinum: #e9ecef;
-  --alabaster: #dee2e6;
-  --silver: #ced4da;
-  --slate: #adb5bd;
-  --gray: #6c757d;
-  --iron: #495057;
-  --gunmetal: #343a40;
-  --charcoal: #212529;
+  --snow: #ffffff;
+  --platinum: #f7f4f1;
+  --alabaster: #e8ded5;
+  --silver: #d6c8bc;
+  --slate: #b9aca1;
+  --gray: #7c7168;
+  --iron: #51453d;
+  --gunmetal: #3b302a;
+  --charcoal: #27201c;
+  --brand-red: #b5222a;
+  --brand-orange: #a85021;
+  --brand-orange-light: #f0b187;
   --ink: var(--charcoal);
   --muted: var(--iron);
-  --accent: var(--gunmetal);
-  --accent-hover: var(--charcoal);
+  --accent: var(--brand-red);
+  --accent-hover: #921b22;
   --line: var(--alabaster);
   --paper: var(--snow);
 }
@@ -119,55 +122,49 @@ p {
   gap: 6px;
 }
 header {
-  background: #212529f2;
+  background: #fffffff2;
   backdrop-filter: blur(18px) saturate(160%);
   -webkit-backdrop-filter: blur(18px) saturate(160%);
-  border-bottom: 1px solid #f8f9fa26;
-  color: var(--snow);
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
   position: sticky;
   top: 0;
   z-index: 40;
   box-shadow: 0 2px 10px #21252912;
 }
 .nav-wrap {
-  min-height: 99px;
+  min-height: 112px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
 }
 .brand {
-  display: flex;
+  display: inline-flex;
+  flex-direction: column;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 4px;
+  width: 280px;
+  min-width: 0;
   flex-shrink: 0;
+  text-align: center;
+  padding-block: 10px;
 }
-.brand-mark {
-  width: 46px;
-  height: 52px;
-  border: 1px solid #f8f9fa70;
-  display: grid;
-  place-items: center;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
-  background: #f8f9fa12;
+.brand-awning {
+  width: 164px;
+  height: auto;
+  display: block;
 }
 .brand strong {
-  font-size: 23px;
-  letter-spacing: -0.005em;
+  color: var(--brand-orange);
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.025em;
   line-height: 1.2;
   display: block;
-}
-.brand strong span {
-  display: block;
-  font-size: 12px;
-  letter-spacing: 0.16em;
-}
-.brand small {
-  display: block;
-  font-size: 9px;
-  letter-spacing: 0.12em;
-  opacity: 0.8;
-  margin-top: 5px;
 }
 .nav {
   display: flex;
@@ -183,10 +180,10 @@ header {
   min-height: 44px;
 }
 .nav > a[aria-current="page"] {
-  color: var(--snow);
+  color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 8px;
-  text-decoration-color: #f8f9fa88;
+  text-decoration-color: var(--accent);
 }
 .button {
   display: inline-flex;
@@ -241,19 +238,19 @@ header {
 }
 .nav .nav-cta {
   padding-inline: 20px;
-  background: var(--snow);
-  color: var(--charcoal);
+  background: var(--accent);
+  color: var(--snow);
 }
 .nav .nav-cta:hover {
-  background: var(--platinum);
+  background: var(--accent-hover);
 }
 .menu-button {
   border-radius: 10px;
   display: none;
   background: none;
-  border: 1px solid #f8f9fa77;
+  border: 1px solid var(--silver);
   padding: 10px;
-  color: var(--snow);
+  color: var(--ink);
   min-width: 44px;
   min-height: 44px;
 }
@@ -336,11 +333,11 @@ header {
   margin-top: 32px;
 }
 .hero-actions .button.primary {
-  background: var(--snow);
-  color: var(--charcoal);
+  background: var(--accent);
+  color: var(--snow);
 }
 .hero-actions .button.primary:hover {
-  background: var(--platinum);
+  background: var(--accent-hover);
 }
 .hero-bottom {
   position: absolute;
@@ -644,12 +641,7 @@ header {
   margin-top: 45px;
 }
 .cta {
-  background: linear-gradient(
-    110deg,
-    var(--charcoal),
-    var(--gunmetal) 70%,
-    var(--iron)
-  );
+  background: var(--accent);
   color: var(--snow);
   padding-block: 58px;
 }
@@ -682,12 +674,7 @@ footer .brand {
 }
 footer .brand strong {
   font-size: 22px;
-}
-footer .brand strong span {
-  font-size: 11px;
-}
-footer .brand small {
-  font-size: 8px;
+  color: var(--brand-orange-light);
 }
 .footer-grid {
   display: grid;
@@ -717,11 +704,11 @@ footer .brand small {
   font-size: 12px;
 }
 .footer-grid .button.primary {
-  background: var(--snow);
-  color: var(--charcoal);
+  background: var(--accent);
+  color: var(--snow);
 }
 .footer-grid .button.primary:hover {
-  background: var(--platinum);
+  background: var(--accent-hover);
 }
 .location {
   display: flex;
@@ -867,9 +854,9 @@ footer .brand small {
   min-height: 44px;
 }
 .filters button[aria-pressed="true"] {
-  background: var(--ink);
+  background: var(--accent);
   color: var(--snow);
-  border-color: var(--ink);
+  border-color: var(--accent);
 }
 .gallery-grid {
   display: grid;
@@ -1165,12 +1152,6 @@ footer .brand small {
   .brand strong {
     font-size: 22px;
   }
-  .brand strong span {
-    font-size: 10px;
-  }
-  .brand small {
-    font-size: 8px;
-  }
   .nav .nav-cta {
     padding-inline: 13px;
   }
@@ -1200,7 +1181,7 @@ footer .brand small {
     top: 100%;
     left: 0;
     right: 0;
-    background: var(--gunmetal);
+    background: var(--snow);
     padding: 20px 32px 28px;
     box-shadow: 0 10px 20px #21252930;
   }
@@ -1274,17 +1255,18 @@ footer .brand small {
     font-size: 11px;
   }
   .nav-wrap {
-    min-height: 80px;
+    min-height: 96px;
+    gap: 12px;
+  }
+  .brand {
+    width: 224px;
+    flex-shrink: 1;
+  }
+  .brand-awning {
+    width: 134px;
   }
   .brand strong {
-    font-size: 23px;
-  }
-  .brand strong span {
-    font-size: 10px;
-  }
-  .brand-mark {
-    width: 40px;
-    height: 46px;
+    font-size: 17px;
   }
   .hero {
     min-height: 615px;
@@ -1552,17 +1534,7 @@ footer .brand small {
     gap: 8px;
   }
   .brand strong {
-    font-size: 20px;
-  }
-  .brand strong span {
-    font-size: 9px;
-  }
-  .brand small {
-    font-size: 7px;
-  }
-  .brand-mark {
-    width: 35px;
-    height: 42px;
+    font-size: 17px;
   }
   .menu-button {
     padding: 8px;
@@ -1614,19 +1586,19 @@ footer .brand small {
   border-radius: 8px;
 }
 .nav > a:not(.button):active {
-  background: #f8f9fa16;
+  background: #b5222a0d;
 }
 @media (prefers-reduced-transparency: reduce) {
   header {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
-    background: var(--charcoal);
+    background: var(--snow);
   }
 }
 @media (prefers-contrast: more) {
   header {
-    background: var(--charcoal);
-    border-bottom-color: var(--snow);
+    background: var(--snow);
+    border-bottom-color: var(--charcoal);
   }
   .button.outline {
     border-color: var(--snow);

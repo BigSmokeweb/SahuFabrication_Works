@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 180" role="img" aria-labelledby="title">
+  <title id="title">Sahu Fabrication Works</title>
+  <defs>
+    <linearGradient id="fabric" x1="0" y1="8" x2="0" y2="62" gradientUnits="userSpaceOnUse"><stop stop-color="#fff" stop-opacity=".24"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#27201c" stop-opacity=".22"/></linearGradient>
+    <clipPath id="awning"><path d="M9 8H207V45C201.5 45 201.5 60 190.5 60S179.5 45 168.5 45 157.5 60 146.5 60 135.5 45 124.5 45 113.5 60 102.5 60 91.5 45 80.5 45 69.5 60 58.5 60 47.5 45 36.5 45 25.5 60 14.5 60C11 60 9 57 9 53V8Z"/></clipPath>
+  </defs>
+  <g transform="translate(140 14) scale(1.2)">
+    <g clip-path="url(#awning)"><path fill="#fff" d="M9 8H207V62H9z"/><path fill="#be2631" d="M9 8H31V64H9zM53 8H75V64H53zM97 8H119V64H97zM141 8H163V64H141zM185 8H207V64H185z"/><path fill="url(#fabric)" d="M9 8H207V64H9z"/></g>
+    <path d="M9 8H207" stroke="#941d26" stroke-width="2"/><path d="M9 53C9 57 11 60 14.5 60 25.5 60 25.5 45 36.5 45S47.5 60 58.5 60 69.5 45 80.5 45 91.5 60 102.5 60 113.5 45 124.5 45 135.5 60 146.5 60 157.5 45 168.5 45 179.5 60 190.5 60 201.5 45 207 45" fill="none" stroke="#51453d" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <text x="270" y="143" text-anchor="middle" fill="#a85021" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="700" font-size="39">Sahu Fabrication Works</text>
+</svg>

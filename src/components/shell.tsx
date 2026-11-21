@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, X, MapPin, Hammer } from "lucide-react";
+import { Menu, X, MapPin } from "lucide-react";
 import { business, phoneLink, whatsappLink } from "@/lib/business";
 const links = [
   ["/", "Home"],
@@ -14,15 +15,15 @@ const links = [
 export function Brand() {
   return (
     <Link className="brand" href="/">
-      <span className="brand-mark">
-        <Hammer size={28} />
-      </span>
-      <span>
-        <strong>
-          SAHU<span> FABRICATION WORKS</span>
-        </strong>
-        <small>SHUTTERS · GATES · ALUMINIUM</small>
-      </span>
+      <Image
+        className="brand-awning"
+        src="/images/sahu-awning.svg"
+        alt=""
+        width={216}
+        height={68}
+        priority
+      />
+      <strong>Sahu Fabrication Works</strong>
     </Link>
   );
 }

@@ -1,6 +1,6 @@
 # Sahu Fabrication Works
 
-Responsive Next.js website for a fabrication business in Thane West. Based on the layout, image slider, introduction, service presentation and enquiry/footer progression of the supplied House of Fabrication reference, with the owner's grayscale palette applied throughout. Original branding, copy and illustrations are used; no reference-site photographs or claims were reused. See [PALETTE.md](PALETTE.md) for the nine theme colors and their roles.
+Responsive Next.js website for a fabrication business in Thane West. Based on the layout, image slider, introduction, service presentation and enquiry/footer progression of the supplied House of Fabrication reference, with the red, white and warm orange branding from the owner's company card. A reconstructed fabric awning sits above the company name in the header and footer. Original copy and illustrations are used; no reference-site photographs or claims were reused. See [PALETTE.md](PALETTE.md) for the current brand colors and their roles.
 
 ## Development
 
